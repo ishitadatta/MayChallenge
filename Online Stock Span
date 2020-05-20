@@ -2,25 +2,20 @@ class StockSpanner {
 
     Stack<SharePrice> priceStack;
 
-    int day=0;
+    int day=0;    
 
-    
-
-    public StockSpanner() {
+    public StockSpanner()
+    {
 
       priceStack=new Stack<>();
 
     }
 
-    
-
-    public int next(int price) {
-
+    public int next(int price) 
+    {
         day++;
 
        SharePrice sp=new SharePrice(day,price);
-
-        
 
         while(!priceStack.isEmpty() && priceStack.peek().getPrice()<=price){
 
@@ -46,15 +41,11 @@ class StockSpanner {
 
 }
 
-
-
 class SharePrice{
 
     int day;
 
     int price;
-
-    
 
     SharePrice(int day,int price){
 
@@ -64,15 +55,11 @@ class SharePrice{
 
     }
 
-    
-
     public int getDay(){
 
         return day;
 
     }
-
-    
 
     public int getPrice(){
 
